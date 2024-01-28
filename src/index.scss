@@ -1,0 +1,69 @@
+@use 'styles/variables';
+
+:root {
+  font-family: variables.$font-family;
+  font-weight: variables.$font-weight;
+  font-size: variables.$font-size;
+
+  color: variables.$color-primary-light;
+  background-color: variables.$color-dark-blue;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  -o-animation: alternate;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 15px;
+}
+
+.advice-container {
+  background-color: variables.$color-dark-grayish-blue;
+  padding: 50px 40px 70px 40px;
+  border-radius: 10px;
+  width: 525px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+
+  & small {
+    color: variables.$color-primary-neon;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 600;
+  }
+
+  & .dice {
+    position: absolute;
+    bottom: -30px;
+    background-color: variables.$color-primary-neon;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+      box-shadow: 0 0 30px variables.$color-primary-neon;
+    }
+  }
+}
