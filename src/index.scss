@@ -65,6 +65,24 @@ body {
     &:hover {
       box-shadow: 0 0 30px variables.$color-primary-neon;
     }
+
+    &:disabled,
+    &[disabled] {
+      background-color: variables.$color-grayish-blue;
+      box-shadow: none;
+      cursor: default !important;
+      pointer-events: none;
+      animation: rotateAnimation 1.5s ease forwards;
+    }
+  }
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 
